@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback | FarmConnect</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        .feedback-hero {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+                        url('https://images.unsplash.com/photo-1521791136064-7986c2920216?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+        .rating-star {
+            color: #d1d5db;
+            cursor: pointer;
+            font-size: 2rem;
+            transition: color 0.2s;
+        }
+        .rating-star.active {
+            color: #f59e0b;
+        }
+        .rating-star:hover {
+            color: #f59e0b;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="home.html" class="flex items-center">
+                <i class="fas fa-leaf text-green-500 text-2xl mr-2"></i>
+                <span class="text-xl font-semibold">FarmConnect</span>
+            </a>
+            <div class="flex space-x-4">
+                <a href="marketplace.html" class="text-gray-700 hover:text-green-600 transition">Marketplace</a>
+                <a href="auth/login.html" class="text-gray-700 hover:text-green-600 transition">Login</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="feedback-hero text-white py-20 flex items-center">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <h1 class="text-3xl md:text-4xl font-bold mb-4">Share Your Feedback</h1>
+            <p class="text-xl mb-6">Help us improve FarmConnect for farmers and retailers</p>
+            <div class="flex justify-center space-x-2">
+                <i class="fas fa-comment-alt text-2xl"></i>
+                <i class="fas fa-lightbulb text-2xl"></i>
+                <i class="fas fa-heart text-2xl"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- Feedback Form -->
+    <section class="py-16">
+        <div class="max-w-2xl mx-auto px-4">
+            <div class="bg-white rounded-xl shadow-md overflow-hidden p-8">
+                <form id="feedbackForm" class="space-y-6">
+                    <!-- Rating Section -->
+                    <div>
+                        <label class="block text-lg font-medium text-gray-700 mb-4">How would you rate your experience with FarmConnect?</label>
+                        <div class="flex justify-center space-x-2 mb-2" id="ratingStars">
+                            <i class="fas fa-star rating-star" data-rating="1"></i>
+                            <i class="fas fa-star rating-star" data-rating="2"></i>
+                            <i class="fas fa-star rating-star" data-rating="3"></i>
+                            <i class="fas fa-star rating-star" data-rating="4"></i>
+                            <i class="fas fa-star rating-star" data-rating="5"></i>
+                        </div>
+                        <div class="flex justify-between text-sm text-gray-500">
+                            <span>Poor</span>
+                            <span>Excellent</span>
+                        </div>
+                        <input type="hidden" name="rating" id="ratingValue" value="0">
+                    </div>
+
+                    <!-- Feedback Type -->
+                    <div>
+                        <label class="block text-lg font-medium text-gray-700 mb-2">What type of feedback are you providing?</label>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-3">
+                            <label class="inline-flex items-center">
+                                <input type="radio" name="feedbackType" value="suggestion" class="text-green-500" checked>
+                                <span class="ml-2">Suggestion</span>
+                            </label>
+                            <label class="inline-flex items-center">
+                                <input type="radio" name="feedbackType" value="bug" class="text-green-500">
+                                <span class="ml-2">Bug Report</span>
+                            </label>
+                            <label class="inline-flex items-center">
+                                <input type="radio" name="feedbackType" value="compliment" class="text-green-500">
+                                <span class="ml-2">Compliment</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- User Type -->
+                    <div>
+                        <label class="block text-lg font-medium text-gray-700 mb-2">You are a:</label>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+                            <label class="inline-flex items-center">
+                                <input type="radio" name="userType" value="farmer" class="text-green-500">
+                                <span class="ml-2">Farmer</span>
+                            </label>
+                            <label class="inline-flex items-center">
+                                <input type="radio" name="userType" value="retailer" class="text-green-500">
+                                <span class="ml-2">Retailer</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Feedback Details -->
+                    <div>
+                        <label for="feedbackDetails" class="block text-lg font-medium text-gray-700 mb-2">Your Feedback*</label>
+                        <textarea id="feedbackDetails" name="feedbackDetails" rows="5" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-green-500 focus:border-green-500" required placeholder="Please share your detailed feedback..."></textarea>
+                    </div>
+
+                    <!-- Contact Info -->
+                    <div>
+                        <label for="contactEmail" class="block text-lg font-medium text-gray-700 mb-2">Email (optional)</label>
+                        <input type="email" id="contactEmail" name="contactEmail" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-green-500 focus:border-green-500" placeholder="If you'd like us to follow up with you">
+                    </div>
+
+                    <!-- Submission -->
+                    <div class="pt-4">
+                        <button type="submit" class="w-full bg-green-600 hover:bg-green-700 text-white py-3 rounded-lg font-medium transition duration-200">
+                            Submit Feedback
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-16 bg-gray-50">
+        <div class="max-w-4xl mx-auto px-4">
+            <h2 class="text-2xl font-bold text-center mb-12">Feedback From Our Community</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-sm">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center text-green-600 mr-4">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold">Rajesh Kumar</h4>
+                            <p class="text-gray-500 text-sm">Farmer, Punjab</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 italic">"The direct connection with retailers has increased my profits by 40%. The platform is easy to use and the support team is very responsive."</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-sm">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center text-blue-600 mr-4">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold">Priya Sharma</h4>
+                            <p class="text-gray-500 text-sm">Retailer, Delhi</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 italic">"FarmConnect has transformed our supply chain. The produce quality is consistently better and our costs have decreased significantly."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 bg-green-600 text-white">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <h2 class="text-2xl font-bold mb-6">Have More to Share?</h2>
+            <p class="text-xl mb-8">We're always looking to improve FarmConnect for our community</p>
+            <a href="feedback.html" class="inline-block bg-white text-green-600 px-8 py-3 rounded-lg font-medium hover:bg-gray-100 transition">
+                Give Additional Feedback
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <p>&copy; 2023 FarmConnect. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Star rating functionality
+        const stars = document.querySelectorAll('.rating-star');
+        const ratingValue = document.getElementById('ratingValue');
+        
+        stars.forEach(star => {
+            star.addEventListener('click', () => {
+                const rating = star.getAttribute('data-rating');
+                ratingValue.value = rating;
+                
+                stars.forEach((s, index) => {
+                    if (index < rating) {
+                        s.classList.add('active');
+                    } else {
+                        s.classList.remove('active');
+                    }
+                });
+            });
+        });
+
+        // Form submission
+        document.getElementById('feedbackForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            if (ratingValue.value === '0') {
+                alert('Please provide a rating');
+                return;
+            }
+            alert('Thank you for your feedback! We appreciate your input.');
+            this.reset();
+            stars.forEach(star => star.classList.remove('active'));
+            ratingValue.value = '0';
+        });
+    </script>
+</body>
+</html>

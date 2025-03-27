@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farmer Dashboard | FarmConnect</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex justify-between">
+                <div class="flex space-x-7">
+                    <div>
+                        <a href="index.html" class="flex items-center py-4 px-2">
+                            <i class="fas fa-leaf text-green-500 text-2xl mr-2"></i>
+                            <span class="font-semibold text-gray-900 text-lg">FarmConnect</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="hidden md:flex items-center space-x-3">
+                    <a href="farmer.html" class="py-2 px-2 text-green-500 font-medium">Dashboard</a>
+                    <a href="products.html" class="py-2 px-2 text-gray-700 hover:text-green-500 transition duration-300">My Products</a>
+                    <a href="order.html" class="py-2 px-2 text-gray-700 hover:text-green-500 transition duration-300">Orders</a>
+                    <a href="chat.html" class="py-2 px-2 text-gray-700 hover:text-green-500 transition duration-300">Messages</a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button class="outline-none mobile-menu-button">
+                        <i class="fas fa-bars text-gray-500 text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Farmer Dashboard Content -->
+    <div class="container mx-auto px-4 py-8">
+        <div class="flex flex-col md:flex-row gap-6">
+            <!-- Sidebar -->
+            <div class="w-full md:w-1/4">
+                <div class="bg-white rounded-lg shadow-sm p-6 mb-6">
+                    <div class="flex items-center mb-6">
+                        <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center text-green-600 text-2xl font-bold mr-4">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold text-gray-800">Rajesh Patel</h3>
+                            <p class="text-sm text-gray-600">Farmer since 2018</p>
+                        </div>
+                    </div>
+                    <div class="space-y-4">
+                        <a href="profile.html" class="flex items-center text-gray-700 hover:text-green-500 transition duration-300">
+                            <i class="fas fa-user-circle mr-3"></i> Profile
+                        </a>
+                        <a href="setting.html" class="flex items-center text-gray-700 hover:text-green-500 transition duration-300">
+                            <i class="fas fa-cog mr-3"></i> Settings
+                        </a>
+                        <a href="logout.html" class="flex items-center text-gray-700 hover:text-green-500 transition duration-300">
+                            <i class="fas fa-sign-out-alt mr-3"></i> Logout
+                        </a>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-sm p-6">
+                    <h3 class="font-semibold text-gray-800 mb-4">Quick Actions</h3>
+                    <div class="space-y-3">
+                        <a href="products.html" class="block bg-green-50 text-green-600 font-medium py-2 px-4 rounded hover:bg-green-100 transition duration-300">
+                            <i class="fas fa-plus-circle mr-2"></i> Add New Product
+                        </a>
+                        <a href="analytics.html" class="block bg-blue-50 text-blue-600 font-medium py-2 px-4 rounded hover:bg-blue-100 transition duration-300">
+                            <i class="fas fa-chart-line mr-2"></i> View Analytics
+                        </a>
+                        <a href="chat.html" class="block bg-purple-50 text-purple-600 font-medium py-2 px-4 rounded hover:bg-purple-100 transition duration-300">
+                            <i class="fas fa-comments mr-2"></i> Check Messages
+                        </a>
+                        <a href="payments.html" class="fa fa-cc-paypal" style="font-size:28px;color:rgb(33, 205, 44)"> payment</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Main Content -->
+            <div class="w-full md:w-3/4">
+                <div class="bg-white rounded-lg shadow-sm p-6 mb-6">
+                    <h2 class="text-2xl font-bold text-gray-800 mb-6">Dashboard Overview</h2>
+                    
+                    <!-- Stats Cards -->
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                        <div class="bg-green-50 rounded-lg p-6">
+                            <div class="flex items-center justify-between">
+                                <div>
+                                    <p class="text-sm text-green-600 font-medium">Active Products</p>
+                                    <h3 class="text-2xl font-bold text-gray-800 mt-1">24</h3>
+                                </div>
+                                <div class="bg-green-100 p-3 rounded-full">
+                                    <i class="fas fa-seedling text-green-600 text-xl"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-blue-50 rounded-lg p-6">
+                            <div class="flex items-center justify-between">
+                                <div>
+                                    <p class="text-sm text-blue-600 font-medium">Pending Orders</p>
+                                    <h3 class="text-2xl font-bold text-gray-800 mt-1">8</h3>
+                                </div>
+                                <div class="bg-blue-100 p-3 rounded-full">
+                                    <i class="fas fa-shopping-basket text-blue-600 text-xl"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-purple-50 rounded-lg p-6">
+                            <div class="flex items-center justify-between">
+                                <div>
+                                    <p class="text-sm text-purple-600 font-medium">Unread Messages</p>
+                                    <h3 class="text-2xl font-bold text-gray-800 mt-1">3</h3>
+                                </div>
+                                <div class="bg-purple-100 p-3 rounded-full">
+                                    <i class="fas fa-envelope text-purple-600 text-xl"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Recent Orders -->
+                    <h3 class="text-lg font-semibold text-gray-800 mb-4">Recent Orders</h3>
+                    <div class="overflow-x-auto">
+                        <table class="min-w-full bg-white">
+                            <thead>
+                                <tr class="bg-gray-50 text-gray-600 text-sm">
+                                    <th class="py-3 px-4 text-left">Order ID</th>
+                                    <th class="py-3 px-4 text-left">Product</th>
+                                    <th class="py-3 px-4 text-left">Retailer</th>
+                                    <th class="py-3 px-4 text-left">Quantity</th>
+                                    <th class="py-3 px-4 text-left">Status</th>
+                                    <th class="py-3 px-4 text-left">Action</th>
+                                </tr>
+                            </thead>
+                            <tbody class="text-gray-700">
+                                <tr class="border-b border-gray-100 hover:bg-gray-50">
+                                    <td class="py-3 px-4">#FC-1001</td>
+                                    <td class="py-3 px-4">Organic Tomatoes</td>
+                                    <td class="py-3 px-4">FreshMart</td>
+                                    <td class="py-3 px-4">50 kg</td>
+                                    <td class="py-3 px-4">
+                                        <span class="bg-yellow-100 text-yellow-800 text-xs px-2 py-1 rounded-full">Pending</span>
+                                    </td>
+                                    <td class="py-3 px-4">
+                                        <a href="#" class="text-green-500 hover:text-green-600">
+                                            <i class="fas fa-eye"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr class="border-b border-gray-100 hover:bg-gray-50">
+                                    <td class="py-3 px-4">#FC-1000</td>
+                                    <td class="py-3 px-4">Carrots</td>
+                                    <td class="py-3 px-4">Veggie King</td>
+                                    <td class="py-3 px-4">30 kg</td>
+                                    <td class="py-3 px-4">
+                                        <span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full">Completed</span>
+                                    </td>
+                                    <td class="py-3 px-4">
+                                        <a href="#" class="text-green-500 hover:text-green-600">
+                                            <i class="fas fa-eye"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Recent Messages -->
+                <div class="bg-white rounded-lg shadow-sm p-6">
+                    <div class="flex justify-between items-center mb-6">
+                        <h3 class="text-lg font-semibold text-gray-800">Recent Messages</h3>
+                        <a href="chat.html" class="text-sm text-green-500 hover:text-green-600">View All</a>
+                    </div>
+                    <div class="space-y-4">
+                        <div class="flex items-start p-3 rounded-lg hover:bg-gray-50 transition duration-300">
+                            <div class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center text-blue-600 mr-4">
+                                <i class="fas fa-store"></i>
+                            </div>
+                            <div class="flex-1">
+                                <div class="flex justify-between items-start">
+                                    <h4 class="font-medium text-gray-800">FreshMart</h4>
+                                    <span class="text-xs text-gray-500">2 hours ago</span>
+                                </div>
+                                <p class="text-sm text-gray-600 mt-1">Can we increase our tomato order to 70kg?</p>
+                            </div>
+                            <div class="w-2 h-2 bg-green-500 rounded-full ml-2"></div>
+                        </div>
+                        <div class="flex items-start p-3 rounded-lg hover:bg-gray-50 transition duration-300">
+                            <div class="w-10 h-10 bg-purple-100 rounded-full flex items-center justify-center text-purple-600 mr-4">
+                                <i class="fas fa-store"></i>
+                            </div>
+                            <div class="flex-1">
+                                <div class="flex justify-between items-start">
+                                    <h4 class="font-medium text-gray-800">Veggie King</h4>
+                                    <span class="text-xs text-gray-500">1 day ago</span>
+                                </div>
+                                <p class="text-sm text-gray-600 mt-1">Thanks for the quick delivery!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+</html>

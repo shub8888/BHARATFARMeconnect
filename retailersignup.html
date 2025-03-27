@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retailer Sign Up | FarmConnect</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        .retailer-hero {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+                        url('https://images.unsplash.com/photo-1556740738-b6a63e27c4df?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+        .form-card {
+            backdrop-filter: blur(10px);
+            background: rgba(255,255,255,0.9);
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="home.html" class="flex items-center">
+                <i class="fas fa-leaf text-green-500 text-2xl mr-2"></i>
+                <span class="text-xl font-semibold">FarmConnect</span>
+            </a>
+            <a href="auth/login.html" class="text-gray-700 hover:text-green-600 transition">
+                Already have an account? <span class="font-medium">Login</span>
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="retailer-hero text-white py-16 md:py-24">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <h1 class="text-3xl md:text-4xl font-bold mb-4">Connect Directly with Farmers</h1>
+            <p class="text-xl mb-8 max-w-2xl mx-auto">Source fresh produce at better prices by eliminating middlemen</p>
+        </div>
+    </section>
+
+    <!-- Registration Form -->
+    <section class="py-12 -mt-10">
+        <div class="max-w-md mx-auto form-card rounded-xl shadow-xl overflow-hidden">
+            <div class="p-8">
+                <div class="text-center mb-8">
+                    <i class="fas fa-store-alt text-4xl text-green-500 mb-4"></i>
+                    <h2 class="text-2xl font-bold text-gray-800">Retailer Registration</h2>
+                    <p class="text-gray-600">Create your business account in minutes</p>
+                </div>
+
+                <form class="space-y-4">
+                    <!-- Business Information -->
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">Business Name*</label>
+                        <input type="text" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-green-500 focus:border-green-500">
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-1">Contact Person*</label>
+                            <input type="text" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-green-500 focus:border-green-500">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-1">Phone Number*</label>
+                            <input type="tel" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-green-500 focus:border-green-500">
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">Email Address*</label>
+                        <input type="email" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-green-500 focus:border-green-500">
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">Password*</label>
+                        <input type="password" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-green-500 focus:border-green-500">
+                    </div>
+
+                    <!-- Business Details -->
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">Business Type*</label>
+                        <select required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-green-500 focus:border-green-500">
+                            <option value="">Select your business type</option>
+                            <option>Grocery Store</option>
+                            <option>Supermarket</option>
+                            <option>Restaurant</option>
+                            <option>Food Processor</option>
+                            <option>Other</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">Business Address*</label>
+                        <input type="text" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-green-500 focus:border-green-500" placeholder="Street, City, State">
+                    </div>
+
+                    <div class="flex items-start">
+                        <input type="checkbox" required class="mt-1 rounded text-green-500">
+                        <span class="ml-2 text-sm text-gray-600">I agree to the <a href="#" class="text-green-600">Terms of Service</a> and <a href="#" class="text-green-600">Privacy Policy</a></span>
+                    </div>
+
+                    <button type="submit" class="w-full bg-green-600 hover:bg-green-700 text-white py-3 rounded-lg font-medium transition duration-200">
+                        Create Retailer Account
+                    </button>
+
+                    <p class="text-center text-sm text-gray-600">
+                        Are you a farmer? <a href="farmer-signup.html" class="text-green-600 font-medium">Sign up here</a>
+                    </p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4">
+            <h2 class="text-2xl font-bold text-center mb-12">Why Retailers Choose FarmConnect</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-gray-50 p-6 rounded-lg border border-gray-200">
+                    <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center text-green-600 text-xl mb-4">
+                        <i class="fas fa-percentage"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-2">Lower Costs</h3>
+                    <p class="text-gray-600">Save 20-40% on procurement by buying directly from farmers without middlemen.</p>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-lg border border-gray-200">
+                    <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center text-green-600 text-xl mb-4">
+                        <i class="fas fa-apple-alt"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-2">Fresher Produce</h3>
+                    <p class="text-gray-600">Get farm-fresh products with longer shelf life and better quality for your customers.</p>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-lg border border-gray-200">
+                    <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center text-green-600 text-xl mb-4">
+                        <i class="fas fa-calendar-check"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-2">Reliable Supply</h3>
+                    <p class="text-gray-600">Build direct relationships with trusted farmers for consistent inventory.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-16 bg-gray-50">
+        <div class="max-w-4xl mx-auto px-4">
+            <h2 class="text-2xl font-bold text-center mb-12">What Retailers Say</h2>
+            <div class="bg-white p-8 rounded-xl shadow-sm">
+                <div class="flex items-center mb-6">
+                    <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center text-green-600 text-2xl mr-4">
+                        <i class="fas fa-user-tie"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold">Sanjay Mehta</h4>
+                        <p class="text-gray-500">Owner, FreshMart Supermarket</p>
+                    </div>
+                </div>
+                <blockquote class="text-gray-600 italic">
+                    "Since switching to FarmConnect, our produce costs have dropped by 35% while quality has improved significantly. Our customers notice the difference in freshness and we've seen a 20% increase in repeat business."
+                </blockquote>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 bg-green-600 text-white">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <h2 class="text-2xl font-bold mb-6">Ready to Transform Your Supply Chain?</h2>
+            <p class="text-xl mb-8">Join hundreds of retailers already benefiting from direct farmer connections</p>
+            <a href="retailer-signup.html" class="inline-block bg-white text-green-600 px-8 py-3 rounded-lg font-medium hover:bg-gray-100 transition">
+                Sign Up Now - It's Free
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <p>&copy; 2023 FarmConnect. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

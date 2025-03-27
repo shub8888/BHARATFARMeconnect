@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Help Center | FarmConnect</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        .help-hero {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+                        url('https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+        .faq-item {
+            transition: all 0.3s ease;
+        }
+        .faq-item:hover {
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="home.html" class="flex items-center">
+                <i class="fas fa-leaf text-green-500 text-2xl mr-2"></i>
+                <span class="text-xl font-semibold">FarmConnect</span>
+            </a>
+            <div class="flex space-x-4">
+                <a href="marketplace.html" class="text-gray-700 hover:text-green-600 transition">Marketplace</a>
+                <a href="auth/login.html" class="text-gray-700 hover:text-green-600 transition">Login</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="help-hero text-white py-20 flex items-center">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <h1 class="text-3xl md:text-4xl font-bold mb-4">Help Center</h1>
+            <p class="text-xl mb-6">Find answers to your questions about FarmConnect</p>
+            <div class="relative max-w-md mx-auto">
+                <input type="text" placeholder="Search help articles..." class="w-full px-4 py-3 rounded-lg pl-10 focus:outline-none focus:ring-2 focus:ring-green-500">
+                <i class="fas fa-search absolute left-3 top-3.5 text-gray-400"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <section class="py-16">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8 mb-12">
+                <div class="bg-white p-6 rounded-lg shadow-sm text-center hover:bg-green-50 transition">
+                    <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center text-green-600 text-2xl mx-auto mb-4">
+                        <i class="fas fa-user-plus"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-2">Getting Started</h3>
+                    <p class="text-gray-600">New to FarmConnect? Learn how to set up your account.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-sm text-center hover:bg-green-50 transition">
+                    <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center text-green-600 text-2xl mx-auto mb-4">
+                        <i class="fas fa-shopping-cart"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-2">Marketplace</h3>
+                    <p class="text-gray-600">Buying and selling on our platform.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-sm text-center hover:bg-green-50 transition">
+                    <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center text-green-600 text-2xl mx-auto mb-4">
+                        <i class="fas fa-credit-card"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-2">Payments</h3>
+                    <p class="text-gray-600">Payment methods and transaction security.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-sm text-center hover:bg-green-50 transition">
+                    <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center text-green-600 text-2xl mx-auto mb-4">
+                        <i class="fas fa-truck"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-2">Delivery</h3>
+                    <p class="text-gray-600">Shipping and logistics information.</p>
+                </div>
+            </div>
+
+            <h2 class="text-2xl font-bold mb-6">Frequently Asked Questions</h2>
+            <div class="space-y-4">
+                <div class="faq-item bg-white p-6 rounded-lg shadow-sm">
+                    <h3 class="text-lg font-semibold flex justify-between items-center">
+                        <span>How do I create an account?</span>
+                        <i class="fas fa-chevron-down text-green-500"></i>
+                    </h3>
+                    <div class="mt-2 text-gray-600 hidden">
+                        <p>To create an account, click on the "Register" button in the top navigation. You'll need to choose whether you're a farmer or retailer, then fill in your basic information. After verifying your email, your account will be active.</p>
+                    </div>
+                </div>
+                <div class="faq-item bg-white p-6 rounded-lg shadow-sm">
+                    <h3 class="text-lg font-semibold flex justify-between items-center">
+                        <span>What are the fees for using FarmConnect?</span>
+                        <i class="fas fa-chevron-down text-green-500"></i>
+                    </h3>
+                    <div class="mt-2 text-gray-600 hidden">
+                        <p>FarmConnect charges a small transaction fee of 2% for successful sales. There are no upfront costs or subscription fees. Our pricing model ensures we only succeed when you succeed.</p>
+                    </div>
+                </div>
+                <div class="faq-item bg-white p-6 rounded-lg shadow-sm">
+                    <h3 class="text-lg font-semibold flex justify-between items-center">
+                        <span>How do I resolve a dispute with a buyer/seller?</span>
+                        <i class="fas fa-chevron-down text-green-500"></i>
+                    </h3>
+                    <div class="mt-2 text-gray-600 hidden">
+                        <p>First, try to resolve the issue directly with the other party through our messaging system. If you can't reach an agreement, you can file a dispute through our resolution center. Our support team will review the case and help find a fair solution.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="py-16 bg-gray-50">
+        <div class="max-w-4xl mx-auto px-4">
+            <h2 class="text-2xl font-bold text-center mb-8">Still Need Help?</h2>
+            <div class="bg-white p-8 rounded-lg shadow-sm">
+                <p class="text-center text-gray-600 mb-6">Our support team is ready to assist you with any questions or issues.</p>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div>
+                        <h3 class="text-lg font-semibold mb-4 flex items-center">
+                            <i class="fas fa-envelope text-green-500 mr-2"></i> Email Support
+                        </h3>
+                        <p class="text-gray-600 mb-2">For general inquiries:</p>
+                        <a href="mailto:support@farmconnect.com" class="text-green-600 font-medium">support@farmconnect.com</a>
+                        
+                        <h3 class="text-lg font-semibold mt-6 mb-4 flex items-center">
+                            <i class="fas fa-phone-alt text-green-500 mr-2"></i> Phone Support
+                        </h3>
+                        <p class="text-gray-600 mb-2">Available Monday-Friday, 9AM-6PM:</p>
+                        <p class="text-green-600 font-medium">+91 1800 123 4567</p>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-semibold mb-4">Visit Our Office</h3>
+                        <p class="text-gray-600 mb-4">
+                            FarmConnect Technologies<br>
+                            123 Agri Business Park<br>
+                            Mumbai, Maharashtra 400001<br>
+                            India
+                        </p>
+                        <a href="contact.html" class="inline-block bg-green-600 text-white px-6 py-2 rounded-lg hover:bg-green-700 transition">
+                            Contact Form
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <p>&copy; 2023 FarmConnect. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // FAQ toggle functionality
+        document.querySelectorAll('.faq-item').forEach(item => {
+            const header = item.querySelector('h3');
+            const content = item.querySelector('div');
+            const icon = header.querySelector('i');
+            
+            header.addEventListener('click', () => {
+                content.classList.toggle('hidden');
+                icon.classList.toggle('fa-chevron-down');
+                icon.classList.toggle('fa-chevron-up');
+            });
+        });
+    </script>
+</body>
+</html>

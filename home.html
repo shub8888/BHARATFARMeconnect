@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FarmConnect - Direct Farmer to Retailer Marketplace</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .hero-section {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+                        url('https://images.unsplash.com/photo-1500382017468-9049fed747ef?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            min-height: 80vh;
+        }
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body class="font-sans bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <div class="flex items-center">
+                    <a href="home.html" class="flex items-center">
+                        <i class="fas fa-leaf text-green-500 text-3xl mr-2"></i>
+                        <span class="text-xl font-bold text-gray-900">FarmConnect</span>
+                    </a>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="home.html" class="text-green-600 font-medium">Home</a>
+                    <a href="aboutus.html" class="text-gray-700 hover:text-green-600 transition">About</a>
+                    <a href="howitwork.html" class="text-gray-700 hover:text-green-600 transition">How It Works</a>
+                    <a href="marketplace.html" class="text-gray-700 hover:text-green-600 transition">Marketplace</a>
+                    <div class="flex space-x-4">
+                        <a href="login.html" class="px-4 py-2 text-gray-700 hover:text-green-600 transition">Login</a>
+                        <a href="register.html" class="px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition">Register</a>
+                    </div>
+                </div>
+                <div class="md:hidden">
+                    <button class="text-gray-500 hover:text-gray-700">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section flex items-center justify-center text-white">
+        <div class="text-center px-4">
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">Connecting Farmers Directly to Retailers</h1>
+            <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">Eliminate middlemen and get fair prices for your produce with our digital marketplace platform</p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="farmer.html" class="bg-green-600 hover:bg-green-700 text-white px-8 py-3 rounded-lg font-medium transition duration-300">
+                    <i class="fas fa-tractor mr-2"></i> I'm a Farmer
+                </a>
+                <a href="retailer.html" class="bg-white hover:bg-gray-100 text-green-600 px-8 py-3 rounded-lg font-medium transition duration-300">
+                    <i class="fas fa-store mr-2"></i> I'm a Retailer
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center mb-12">Why Choose FarmConnect?</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="feature-card bg-gray-50 p-8 rounded-xl transition duration-300">
+                    <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center text-green-600 text-2xl mb-4 mx-auto">
+                        <i class="fas fa-money-bill-wave"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-center mb-2">Better Prices</h3>
+                    <p class="text-gray-600 text-center">Farmers earn 30-50% more while retailers save 20-40% on procurement costs by eliminating middlemen.</p>
+                </div>
+                <div class="feature-card bg-gray-50 p-8 rounded-xl transition duration-300">
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center text-blue-600 text-2xl mb-4 mx-auto">
+                        <i class="fas fa-truck"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-center mb-2">Fresher Produce</h3>
+                    <p class="text-gray-600 text-center">Direct farm-to-store supply chain means fresher products for your customers with longer shelf life.</p>
+                </div>
+                <div class="feature-card bg-gray-50 p-8 rounded-xl transition duration-300">
+                    <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center text-purple-600 text-2xl mb-4 mx-auto">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-center mb-2">Trusted Relationships</h3>
+                    <p class="text-gray-600 text-center">Build long-term partnerships with verified farmers and retailers through our secure platform.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Preview -->
+    <section class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold mb-4">How FarmConnect Works</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Our simple process connects farmers and retailers in just a few clicks</p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8 mb-12">
+                <div class="bg-white p-6 rounded-lg shadow-sm">
+                    <div class="text-5xl font-bold text-green-600 mb-4">1</div>
+                    <h3 class="text-xl font-semibold mb-2">Create Your Profile</h3>
+                    <p class="text-gray-600">Set up your account in minutes with basic information about your farm or business.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-sm">
+                    <div class="text-5xl font-bold text-green-600 mb-4">2</div>
+                    <h3 class="text-xl font-semibold mb-2">Connect with Partners</h3>
+                    <p class="text-gray-600">Browse and connect with verified farmers or retailers based on your needs.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-sm">
+                    <div class="text-5xl font-bold text-green-600 mb-4">3</div>
+                    <h3 class="text-xl font-semibold mb-2">Start Trading</h3>
+                    <p class="text-gray-600">Begin transactions with secure payments and logistics support.</p>
+                </div>
+            </div>
+            <div class="text-center">
+                <a href="howitwork.html" class="inline-block bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg font-medium transition">
+                    Learn More About How It Works <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center mb-12">What Our Users Say</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-gray-50 p-8 rounded-xl">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center text-green-600 mr-4">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold">Rajesh Patel</h4>
+                            <p class="text-gray-500 text-sm">Farmer, Maharashtra</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 italic">"Since joining FarmConnect, my income has doubled. I now get fair prices and have built relationships with 5 regular retail buyers."</p>
+                    <div class="flex mt-4 text-yellow-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                <div class="bg-gray-50 p-8 rounded-xl">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center text-blue-600 mr-4">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold">Priya Sharma</h4>
+                            <p class="text-gray-500 text-sm">Grocery Store Owner, Delhi</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 italic">"The quality and freshness of produce from FarmConnect farmers is unmatched. My customers love it and my costs are down 30%."</p>
+                    <div class="flex mt-4 text-yellow-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 bg-green-600 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl font-bold mb-6">Ready to Transform Your Business?</h2>
+            <p class="text-xl mb-8 max-w-3xl mx-auto">Join thousands of farmers and retailers already benefiting from direct connections on FarmConnect</p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="marketplace.html" class="bg-white text-green-600 px-8 py-3 rounded-lg font-medium hover:bg-gray-100 transition">
+                    Explore Marketplace
+                </a>
+                <a href="retailersignup.html" class="border-2 border-white text-white px-8 py-3 rounded-lg font-medium hover:bg-white hover:bg-opacity-10 transition">
+                    Create Free Account
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-semibold mb-4 flex items-center">
+                        <i class="fas fa-leaf text-green-400 mr-2"></i> FarmConnect
+                    </h3>
+                    <p class="text-gray-400">The direct farmer-to-retailer marketplace eliminating middlemen since 2023.</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="home.html" class="text-gray-400 hover:text-white transition">Home</a></li>
+                        <li><a href="about.html" class="text-gray-400 hover:text-white transition">About Us</a></li>
+                        <li><a href="howitwork.html" class="text-gray-400 hover:text-white transition">How It Works</a></li>
+                        <li><a href="marketplace.html" class="text-gray-400 hover:text-white transition">Marketplace</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Support</h4>
+                    <ul class="space-y-2">
+                        <li><a href="helpcenter.html" class="text-gray-400 hover:text-white transition">Help Center</a></li>
+                        <li><a href="contactus.html" class="text-gray-400 hover:text-white transition">Contact Us</a></li>
+                        <li><a href="pryvacy.html" class="text-gray-400 hover:text-white transition">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Connect</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition text-xl"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition text-xl"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition text-xl"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition text-xl"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2023 FarmConnect. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Supplier Network | FarmConnect</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body class="bg-gray-50">
+    <div class="container mx-auto px-4 py-8">
+        <div class="flex justify-between items-center mb-8">
+            <h1 class="text-2xl font-bold text-gray-800">Supplier Network</h1>
+            <div class="flex space-x-4">
+                <button class="bg-white border border-gray-300 px-4 py-2 rounded hover:bg-gray-50 transition">
+                    <i class="fas fa-search mr-2"></i> Search
+                </button>
+                <button class="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700 transition">
+                    <i class="fas fa-plus mr-2"></i> Add Supplier
+                </button>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Supplier Card 1 -->
+            <div class="bg-white rounded-lg shadow-sm overflow-hidden hover:shadow-md transition">
+                <div class="p-6">
+                    <div class="flex items-center mb-4">
+                        <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mr-4">
+                            <i class="fas fa-tractor text-green-600 text-2xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold text-lg">Green Valley Farms</h3>
+                            <p class="text-sm text-gray-600">Organic Vegetables</p>
+                        </div>
+                    </div>
+                    <div class="space-y-2 text-sm">
+                        <p class="flex items-center">
+                            <i class="fas fa-map-marker-alt text-gray-400 mr-2 w-4"></i>
+                            Maharashtra, India
+                        </p>
+                        <p class="flex items-center">
+                            <i class="fas fa-star text-yellow-400 mr-2 w-4"></i>
+                            4.8 (120 reviews)
+                        </p>
+                        <p class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-2 w-4"></i>
+                            Certified Organic
+                        </p>
+                    </div>
+                    <div class="mt-4 flex space-x-2">
+                        <button class="flex-1 bg-green-600 text-white py-2 rounded hover:bg-green-700 transition">
+                            <i class="fas fa-shopping-cart mr-2"></i> Order
+                        </button>
+                        <button class="w-10 h-10 border border-gray-300 rounded hover:bg-gray-50 transition">
+                            <i class="fas fa-envelope text-gray-600"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Supplier Card 2 -->
+            <div class="bg-white rounded-lg shadow-sm overflow-hidden hover:shadow-md transition">
+                <div class="p-6">
+                    <div class="flex items-center mb-4">
+                        <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mr-4">
+                            <i class="fas fa-tractor text-blue-600 text-2xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold text-lg">Fresh Harvest Co-op</h3>
+                            <p class="text-sm text-gray-600">Fruits & Vegetables</p>
+                        </div>
+                    </div>
+                    <div class="space-y-2 text-sm">
+                        <p class="flex items-center">
+                            <i class="fas fa-map-marker-alt text-gray-400 mr-2 w-4"></i>
+                            Punjab, India
+                        </p>
+                        <p class="flex items-center">
+                            <i class="fas fa-star text-yellow-400 mr-2 w-4"></i>
+                            4.6 (85 reviews)
+                        </p>
+                        <p class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-2 w-4"></i>
+                            Fair Trade Certified
+                        </p>
+                    </div>
+                    <div class="mt-4 flex space-x-2">
+                        <button class="flex-1 bg-green-600 text-white py-2 rounded hover:bg-green-700 transition">
+                            <i class="fas fa-shopping-cart mr-2"></i> Order
+                        </button>
+                        <button class="w-10 h-10 border border-gray-300 rounded hover:bg-gray-50 transition">
+                            <i class="fas fa-envelope text-gray-600"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Add New Supplier Card -->
+            <div class="border-2 border-dashed border-gray-300 rounded-lg hover:border-green-500 transition flex items-center justify-center cursor-pointer">
+                <div class="text-center p-6">
+                    <div class="w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-3">
+                        <i class="fas fa-plus text-gray-400 text-2xl"></i>
+                    </div>
+                    <h3 class="font-medium text-gray-700">Add New Supplier</h3>
+                    <p class="text-sm text-gray-500 mt-1">Connect with more farmers</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
